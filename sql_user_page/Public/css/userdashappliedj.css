@@ -1,0 +1,316 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(219, 219, 219);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px;
+  background: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 2rem 8rem 2rem 2rem;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+}
+
+.search_box input {
+  padding: 9px;
+  width: 250px;
+  background: rgb(228, 228, 228);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search_box i {
+  padding: 0.66rem;
+  cursor: pointer;
+  color: #fff;
+  background: #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons i {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.header-icons .account {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Side menubar section */
+nav {
+  background: #fff;
+}
+
+.side_navbar {
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side_navbar span {
+  color: gray;
+  margin: 1rem 3rem;
+  font-size: 12px;
+}
+
+.side_navbar a {
+  width: 100%;
+  padding: 0.8rem 3rem;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+}
+
+.side_navbar a:hover {
+  background: rgb(235, 235, 235);
+}
+
+.list{
+  padding-inline-start: 0px;
+}
+.list li {
+ margin:5%;
+ list-style-type: none;
+
+}
+/* Main Body Section */
+.main-body {
+  width: 70%;
+  padding: 1rem;
+}
+
+.promo_card {
+  width: 100%;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 0.5rem 1rem 1rem 3rem;
+  background: rgb(75, 232, 219);
+}
+
+.promo_card h1,
+.promo_card span,
+button {
+  margin: 10px;
+}
+
+.promo_card button {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Sidebar Section */
+.sidebar {
+  width: 15%;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.sidebar h4 {
+  margin-bottom: 1.5rem;
+}
+
+.my-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: none;
+}
+
+#dropicon {
+  width: 500px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn {
+  color: #000;
+}
+
+.dropdown {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(20, 19, 19);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  opacity: 0.7;
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(20, 4, 4, 0.2);
+  z-index: 1;
+  font-weight: bold;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Available Jobs */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+}
+
+.search_box h2{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20%;
+}
+
+.job {
+  background-color: rgb(75, 232, 219);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.apply-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Available jobs end */
+
+/* sticky */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 60px;
+}
+
+#navbar {
+  background-color: rgba(88, 120, 173, 255);
+  z-index: 10;
+}
+
+/* sticky close */

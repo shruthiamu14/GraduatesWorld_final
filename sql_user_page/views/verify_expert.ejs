@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Expert</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div>
+        <h1>Verify Expert</h1>
+    </div>
+    <div class="container">
+        <form id="form" class="form" method="post" action="/verify_expert">
+            <div class="form-field">
+                <span style="color:red;"><%= ex %></span>
+                <label for="name">Expert Email:</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+
+                <small></small>
+            </div>
+            
+            <button type="submit" value="submit" name="submit" style="background-color: #51a8ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;">Submit</button>
+
+        </form>
+        <p>Already have an account? <a href="/expertlogin" class="a2">Login!</a></p>
+    </div>
+
+
+<!--<script src="/js/register.js"></script>-->
+</body>
+
+
+</body>
+
+</html>

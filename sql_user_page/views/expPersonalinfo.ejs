@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Expert</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div>
+        <h1>To Become an Expert</h1>
+    </div>
+    <div class="container">
+        <form id="form" class="form" method="post" action="/expPersonalinfo">
+            <!-- <h1>Sign Up</h1> -->
+            <span style="color:red;"><%= reg %></span>
+            <span style="color:red;"><%= msg %></span>
+            <div class="form-field">
+                <label for="name">Fullname:</label>
+                <input type="text" name="name" id="name" autocomplete="off">
+                <span style="color:red;"><%= a %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="off">
+                <span style="color:red;"><%= b %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Experience:</label>
+                <input type="text" name="exp" id="exp" autocomplete="off">
+                <span style="color:red;"><%= d %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Graduation:</label>
+                <input type="text" name="grad" id="grad" autocomplete="off">
+                <span style="color:red;"><%= d %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Address:</label>
+                <input type="text" name="address" id="address" autocomplete="off">
+                <small></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="name">Phone:</label>
+                <input type="text" name="Phone" id="Phone" autocomplete="off">
+                <span style="color:red;"><%= c %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Skills:</label>
+                <input type="text" name="skill" id="skill" autocomplete="off">
+                <small></small>
+            </div>
+
+            
+            <div class="form-field">
+                <label for="name">Upload Resume</label>
+                <input type="file" name="Resume" id="Resume" autocomplete="off">
+                <small></small>
+            </div>
+            
+            <button type="submit" value="submit" name="submit" style="background-color: #51a8ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;">Submit</button>
+
+        </form>
+        <p>Already have an account? <a href="/expertlogin" class="a2">Login!</a></p>
+    </div>
+
+
+<!--<script src="/js/register.js"></script>-->
+</body>
+
+
+</body>
+
+</html>

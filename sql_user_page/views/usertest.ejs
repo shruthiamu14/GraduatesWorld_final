@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>UserDashBoard</title>
+    <link rel="stylesheet" href="/css/usertest.css" />
+    <script src="https://cdn.lordicon.com/ritcuqlt.js">
+    </script>
+
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header" id="navbar">
+        <div class="logo">
+            <a href="#">GraduatesWorld</a>
+            <h2>User Dashboard</h2>
+        </div>
+        <div class="header-icons navbar">
+            <div class=" account dropdown" id="clickdrop">
+
+                <lord-icon id="dropicon" class="dropbtn" src="https://cdn.lordicon.com/bhfjfgqz.json"
+                    trigger="hover"></lord-icon>
+                <h4 class="dropbtn"><%= getname %></h4>
+                <div class="dropdown-content">
+                    <a href=""><%= getname %></a>
+                    <a href=""><%= getemail %></a>
+                    <a href="/update">Update Profile?</a>
+                    <a href="/logout">LogOut?</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <h2>Main Menu</h2>
+                <div class="search_box">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="/userdashboard" class="active">Dashboard</a>
+                <a href="/userdashboard">Available Jobs</a>
+                <a href="/userdashappliedj">Applied Jobs</a>
+                <a href="#quizform">Take a test</a>
+                <a href="/Allexperts">Search For Expert</a>
+            </div>
+        </nav>
+
+        <div class="main-body" id="top">
+
+            <div class="promo_card">
+                <h1>Welcome to GraduatesWorld</h1>
+                <span>Your future is our concern</span>
+                <button class="my-button">Learn More</button>
+            </div>
+
+            <div class="history_lists">
+                <div class="list1">
+                </div>
+
+                <div class="list2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+        </div>
+    </div>
+
+    <!-- userQuiz -->
+
+
+    <h1>User Quiz</h1>
+	<form id="quizform">
+		<h2>Question 1</h2>
+		<p>What is the largest unit of data storage?</p>
+		<label>
+			<input type="radio" name="q1" value="a">
+			a. Megabyte
+		</label>
+		<label>
+			<input type="radio" name="q1" value="b">
+			b. Kilobyte
+		</label>
+		<label>
+			<input type="radio" name="q1" value="c">
+			c. Gigabyte
+		</label>
+
+		<h2>Question 2</h2>
+		<p>What is the name of the programming language developed by Microsoft?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. Java
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. C#
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. Python
+		</label>
+
+        <h2>Question 3</h2>
+		<p>How do you start writing a for loop in Python?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. for x>y
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. for x in y
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. for(x)
+		</label>
+
+        <h2>Question 4</h2>
+		<p>Which collection is ordered, changeable, and allows duplicate members?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. Tuple
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. List
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. Map
+		</label>
+
+        <h2>Question 5</h2>
+		<p>Which of these collections defines a TUPLE?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. {"apple","banana","cherry"}
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. {"name":"apple","type":"fruit"}#
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. {"apple","banana":"fruit"}
+		</label>
+
+        <h2>Question 6</h2>
+		<p>Which method can be used to replace parts of a string?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. switch()
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. replace()
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. swap()
+		</label>
+
+        <h2>Question 7</h2>
+		<p>What is a correct syntax to return the first character in a string?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. x = "Hello".sub(0,1)
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. x = "Hello"[0]
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. x = "Hello[0]"
+		</label>
+
+        <h2>Question 8</h2>
+		<p>What is the correct way to create a function in Python?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. create myFunction()
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. def myFunction()
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. myFunction()
+		</label>
+
+        <h2>Question 9</h2>
+		<p>What is the name of the programming language developed by Microsoft?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. Java
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. C#
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. Python
+		</label>
+
+        <h2>Question 10</h2>
+		<p>How do you start writing a for loop in Python?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			a. for x>y
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			b. for x in y
+		</label>
+		<label>
+			<input type="radio" name="q2" value="c">
+			c. for(x)
+		</label>
+        <a href="/thankuserforquiz" class="button">Click me</a>
+
+	</form>
+      
+
+
+    <!-- userQuiz ends -->
+
+   
+
+</body>
+
+<script>
+    // script for onhover dropdown
+    var drop = document.getElementById("drop");
+    var clickdrop = document.getElementById("clickdrop");
+    clickdrop.onclick = function () {
+        drop.style.display = "block";
+    }
+
+    // script for sticky
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 240px;
+    background: #39bda7;
+    transition: all 0.5s ease;
+}
+
+
+.sidebar  .logo_img{
+    margin-left: 15%;
+    width: 70%;
+    margin-bottom: 0%;
+}
+
+.logo_name {
+
+    margin-left: 10%;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sidebar .nav-links {
+    margin-top: 10%;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    height: 50px;
+}
+
+.sidebar .nav-links li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a.active {
+    background: #081D45;
+}
+
+.sidebar .nav-links li .active{
+    background-color:#081D45 ;
+}
+.sidebar .nav-links li a:hover {
+    background: #081D45;
+}
+
+
+.sidebar .nav-links li a .links_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+
+
+
+.home-section {
+    position: relative;
+    background: #f5f5f5;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+}
+
+
+
+.home-section nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 240px);
+    left: 240px;
+    z-index: 100;
+    padding: 0 20px;
+     transition: all 0.5s ease;
+}
+
+
+.home-section nav .sidebar-button {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.home-section nav .search-box {
+    position: relative;
+    height: 50px;
+    max-width: 590px;
+    width: 100%;
+    margin: 0 20px;
+    
+}
+
+nav .search-box input {
+    height: 100%;
+    width: 100%;
+    background: #F5F6FA;
+    border: 2px solid #EFEEF1;
+    border-radius: 100px;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+
+.home-section .home-content {
+    position: relative;
+    padding-top: 104px;
+}
+
+.home-content .overview-boxes {
+    padding: 0 20px;
+    margin-bottom: 26px;
+}
+
+ .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #26bdc7;
+    padding: 15px 14px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ }
+
+.box .button{
+    
+    background-color: #0A2558;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.box .button a{
+    text-decoration: none;
+    color: #EFEEF1;
+}
+.home-content .box .number {
+width: 50%;
+    font-size: 35px;
+    margin-top: -6px;
+    font-weight: 500;
+}
+
+
+ .admin-boxes {
+    display: flex;
+    padding-top: 20px;
+    margin: 5%;
+
+}
+
+ .admin-left{
+    flex:50%;
+    width: 100%;
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+ .admin-right{
+    flex:50%;
+    width: 100%;
+    
+    
+}
+
+.admin-boxes-2{
+    display: flex;
+    padding-top: 20px;
+    margin-left: 5%;
+    position: absolute;
+    top: 95%;
+  
+}
+
+ .admin-left-2{
+    flex:50%;
+    width: 100%;
+    margin-left: 15%;
+    margin-right: 70%;
+    font-size: 17px;
+}
+
+ .admin-right-2{
+    flex:50%;
+    width: 100%;
+    margin-left: 15%;
+    font-size: 18px;
+}
+.home-content   .title{
+   position: absolute;
+   left:40%;
+
+}
+ .title {
+    font-size: 24px;
+    font-weight: bolder;
+    /* margin-bottom: 10px; */
+}
+
+.btn{
+    color: #EFEEF1;
+    margin-left: 50%;
+    background-color: #0A2558;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+#dropicon{
+    width:500px;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropbtn{
+    color: #000;
+  }
+  .dropdown  {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: rgb(20, 19, 19);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown h4{
+    position: absolute;
+    left:80%;
+  }
+ 
+  .dropdown-content {
+    opacity: 0.7;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right:15px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(20, 4, 4, 0.2);
+    z-index: 1;
+    font-weight: bold;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Admin Dashboard </title>
+    <style>
+        h1 {
+			font-size: 36px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		.container {
+          
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 50px;
+			padding: 0 20px;
+        }
+
+		.form-box {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			margin: 20px;
+			padding: 75px;
+			text-align: left;
+			width: 40%;
+            height:350px;
+		}
+
+		.form-box h2 {
+			color: #4CAF50;
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+
+		input[type="text"] {
+			background-color: #f5f5f5;
+			border: none;
+			border-radius: 5px;
+			color: #333;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		button {
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px 20px;
+			width: 100%;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		/* @media screen and (max-width: 600px) {
+			.form-box {
+				width: 100%;
+			}
+		} */
+    </style>
+    <link href="/css/admin.css" rel='stylesheet'>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img class="logo_img" src="/js/images/logo2.png" width="55%" alt=""><br>
+
+        </div>
+        <span class="logo_name">GraduatesWorld</span>
+
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+
+                    <span class="links_name">
+                        <pre>                Dashboard</pre>
+                    </span>
+
+                </a>
+            </li>
+
+
+
+
+            <li>
+                <a href="/admindashboard">
+
+                    <span class="links_name">
+                        <pre>                  Team      </pre>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="lightgreen"
+                        class="bi bi-person-hearts" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/removeuser">
+
+                    <span class="links_name">
+                        <pre>              Remove a user   </pre>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgreen"
+                        class="bi bi-person-dash-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11 7.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="active">
+
+                    <span class="links_name">
+                        <pre>             Remove An Expert  </pre>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgreen"
+                        class="bi bi-person-x-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/sendmail">
+
+                    <span class="links_name">
+                        <pre>               Select An Expert     </pre>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightgreen"
+                        class="bi bi-send-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/addajob" >
+
+                    <span class="links_name">
+                        <pre>               Add A Job    </pre>
+                    </span>
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <img src="/js/images/dashboard.png" width="6%" alt="">
+                <span class="dashboard">
+                    <pre>  Admin Dashboard</pre>
+                </span>
+            </div>
+            <div class="search-box">
+
+                <input type="text" placeholder="Search...">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                -->
+            </div>
+            <div class="header-icons navbar">
+                <div class=" account dropdown" id="clickdrop">
+                   
+                    <h4 class="dropbtn"><%= getnamee %></h4>
+                    <lord-icon id="dropicon" class="dropbtn" src="https://cdn.lordicon.com/bhfjfgqz.json"
+                    trigger="hover"></lord-icon>
+                    <div class="dropdown-content">
+                        <a href=""><%= getnamee %></a>
+                        <a href=""><%= getemaill %></a>
+                        <a href="/adminlogout">LogOut?</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="home-content">
+            <div class="overview-boxes">
+                <div class="box">
+                    <div class="right-side">
+                        <div class="box-topic">WELCOME !!!</div>
+                        <div class="number"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="45"
+                                fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z" />
+                                <path
+                                    d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z" />
+                            </svg>
+                        </div>
+
+
+                        <div class="button"  >
+                            <a href="#">View More</a>
+                           
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <h1> Forms </h1>
+            <div class="container">
+                <div class="form-box">
+                    <h2>Remove an Expert</h2>
+                    <form method="post" action="/remexpert">
+                        <span style="color:red;"><%= no_expert %></span>
+                        <input type="text" id="removeexpert" name="removeexpert" placeholder="Enter Expert Email...">
+                        <button type="submit">Remove</button>
+                    </form>
+                </div>
+                </div>
+
+
+</body>
+
+</html>

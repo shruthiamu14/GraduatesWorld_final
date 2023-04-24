@@ -1,0 +1,150 @@
+body{
+    background-image: url(/js/images/bl.jpg);
+    /* background-repeat: no-repeat; */
+}
+.container{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.mainbox{
+    margin-top: 100px;
+    padding:30px;
+    margin-right:100px;
+    margin-left:100px;
+   
+    /* margin: 2px solid grey; */
+   
+
+}
+.box{
+    padding:25px;
+    margin:15px;
+    background-color: rgba(12, 66, 87, 0.963);
+    border-radius: 20px;
+    align-items: center;
+    width: 95%;
+   
+
+}
+
+.div-rightbot{
+    padding-top: 20px;
+    padding-left: 750px;
+}
+.jobtitle{
+    padding-top: 5px;
+    color: rgb(187, 195, 202);
+}
+
+.edd{
+    color:aliceblue;
+}
+
+.sal{
+    color: aliceblue;
+}
+.locc{
+    color: aliceblue;
+}
+
+.wholebox{
+    display: flex;
+}
+
+.sidebox{
+    border-radius: 5px;
+    background-color: rgba(10, 50, 59, 0.888);
+    width: 20%;
+    color: aliceblue;
+    text-decoration-color: aliceblue;
+    margin-top: 150px;
+    padding:30px;
+}
+
+.inputsearch{
+    padding:10px;
+    margin: 20px;
+    border-radius:7px; 
+}
+
+.sidesearch{
+    padding:10px;
+    border-radius: 15px;
+    position: relative;
+    left: 8%;
+    /* right: 100px; */
+}
+
+/* .slinks{
+    text-decoration: none;
+    margin: 30px;
+    margin-left: 0px;
+    
+} */
+
+.sideitem{
+    list-style-type: none;
+}
+ .slinks{
+    list-style-type:none;
+    text-decoration-line: none;
+    text-decoration: none;
+    /* position: relative;
+    right: 80px; */
+    box-sizing: border-box;
+    color: rgb(179, 191, 195);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sidetext{
+    font-size: 25px;
+    color: rgb(47, 224, 224);
+    text-align: center;
+    line-height: 50px;
+    padding: 0;
+
+}
+
+.vmore{
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+    left:85%;
+    
+}
+.vmore:hover{
+    color: aqua;
+}
+.sideitem{
+    border-bottom: solid 1px white;
+    font-size: 25px;
+    padding: 15px;
+   
+    line-height: 50px;
+    position: relative;
+    right: 65px;
+    box-sizing: border-box;
+}
+
+.sideitem a:hover{
+    color:cyan;
+    border-left: 3px solid cyan;
+    font-size: 20px;
+   padding: 10px;
+    display: block;
+    background-color: rgb(1, 13, 9);
+}
+
+.box:hover{
+    background-color: rgba(23, 103, 135, 0.963);
+}
+/* .menuline{
+    margin-top:40px;
+    padding: 0;
+    
+}
+
+.downline{
+    margin-bottom: 30px;
+} */

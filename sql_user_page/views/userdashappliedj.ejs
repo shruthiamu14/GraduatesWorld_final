@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>UserDashBoard</title>
+    <link rel="stylesheet" href="/css/userdashappliedj.css" />
+    <script src="https://cdn.lordicon.com/ritcuqlt.js">
+    </script>
+
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="/index.js"></script>
+</head>
+
+<body>
+    <header class="header" id="navbar">
+        <div class="logo">
+            <a href="#">GraduatesWorld</a>
+            <h2>UserDashboard</h2>
+        </div>
+        <div class="header-icons navbar">
+            <div class=" account dropdown" id="clickdrop">
+
+                <lord-icon id="dropicon" class="dropbtn" src="https://cdn.lordicon.com/bhfjfgqz.json"
+                    trigger="hover"></lord-icon>
+                <h4 class="dropbtn"><%= getname %></h4>
+                <div class="dropdown-content">
+                    <a href=""><%= getname %></a>
+                    <a href=""><%= getemail %></a>
+                    <a href="/update">Update Profile?</a>
+                    <a href="/logout">LogOut?</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <h2>Main Menu</h2>
+                <form ><div class="search_box">
+                    <input type="text" placeholder="Search"  onkeyup="searchFunction()" id="searchinput" name="searchinput">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div></form>
+                <ul id="myul" class="list">
+            <li> <a href="/userdashboard" class="active">Dashboard</a></li>
+            <li> <a href="/userdashboard#availablejobs">Available Jobs</a></li>
+                <li>  <a href="/userdashappliedj">Applied Jobs</a></li>
+                    <li>  <a href="/usertest">Take A Test</a></li>
+                        <li> <a href="/Allexperts">Search For expert</a></li>
+                           
+                        </ul>
+            </div>
+        </nav>
+
+        <div class="main-body" id="top">
+
+            <div class="promo_card">
+                <h1>Welcome to GraduatesWorld</h1>
+                <span>Your future is our concern</span>
+                <button class="my-button">Learn More</button>
+            </div>
+
+            <div class="history_lists">
+                <div class="list1">
+                </div>
+
+                <div class="list2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+        </div>
+    </div>
+
+    <!-- Available Jobs -->
+
+    <main id="availablejobs">
+        <form method="post" action="/searchapplied">
+        <div class="search_box">
+            
+            <h2>AppliedJobs</h2>
+            
+                <input type="text" placeholder="Search" name="sea" id="sea">
+                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        </div>
+        
+        <div id="job-list">
+
+            <% if(values.length){ for(var i=0; i< values.length; i++) {%>
+                <div class = "job">
+                <h3><%= values[i].role %></h3>
+                <p>Company: <%= values[i].company %></p>
+                
+                <p>Status: <%= values[i].status %></p>
+                <!-- <a><button class="apply-button" type="submit" data-company="<%= values[i].company %>" data-role="<%= values[i].role %>" onclick="applyNow(event)">Apply Now</button></a> -->
+                </div>
+
+                <% } } else{ %>
+                    
+                    <p>No data ever existed.</p>
+                  
+                  <% } %>
+
+
+
+
+
+
+
+
+              <!-- <div class="job">
+                <h3>Marketing Manager</h3>
+                <p>Company: ABC Inc.</p>
+                <p>Location: New York, NY</p>
+                <p>Requirements: Bachelor's degree in Marketing</p>
+                <a><button class="apply-button">Apply Now</button></a>
+            </div>
+            <div class="job">
+                <h3>Accountant</h3>
+                <p>Company: 123 Financial</p>
+                <p>Location: Chicago, IL</p>
+                <p>Requirements: Bachelor's degree in Accounting</p>
+                <a><button class="apply-button">Apply Now</button></a> 
+            </div> -->
+        </div>
+    </main>
+
+    <!-- Available Jobs ends -->
+
+   
+
+</body>
+
+<script>
+   function applyNow() {
+    let companyname=event.target.getAttribute('data-company');
+    let role=event.target.getAttribute('data-role');
+    // console.log(companyname,role);
+
+    
+        var url = 'http://localhost:5000/applyjobs'; // Replace with your server URL
+        var data = {
+            companyname: companyname,
+            role: role
+        };
+        fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Application submitted successfully!');
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+    }
+
+
+
+
+
+    // script for onhover dropdown
+    var drop = document.getElementById("drop");
+    var clickdrop = document.getElementById("clickdrop");
+    clickdrop.onclick = function () {
+        drop.style.display = "block";
+    }
+
+    // script for sticky
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    function searchFunction(){
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchinput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myul");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+   }
+</script>
+
+</html>

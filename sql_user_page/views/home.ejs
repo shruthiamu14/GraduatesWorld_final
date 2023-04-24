@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduates World</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <a href="/home"><img src="/js/images/logo2.png" class="logo"></a>
+
+    <a href="#" class="brand"></a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+
+        <a href="/home">Home</a>
+        <a href="#ourcollab">OurCollabrations</a>
+        <a href="/contactabout">Contact</a>
+        <a href="/contactabout#toabout">About</a>
+
+        <div class="dropdown">
+          <a href="" class="dropbtn">Login</a>
+          <div class="dropdown-content">
+            <br>
+            <a href="/login">User-login</a>
+            <a href="/expertlogin">Expert-login</a>
+            <a href="/adminlogin">Admin-login</a>
+          </div>
+        </div>
+
+        <a href="/register">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="home">
+    <video class="video-slide active" src="/js/videos/video5.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/js/videos/video6.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/js/videos/video1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="/js/videos/video2.mp4" autoplay muted loop></video>
+    <div class="content active">
+      <h1>Graduates<span>World</span></h1>
+      <p>--Your future is our concern--</p>
+      <a href="#footer" class="button">
+        <button class="hover-btn">Explore</button>
+      </a>
+    </div>
+    <div class="content">
+      <h1>Searching for a <span>Job?</span></h1>
+      <p>--High Profilied Jobs</p>
+      <!-- <a href="#" class="button">
+        <button class="hover-btn">Explore</button>
+      </a> -->
+      <!-- vikas html -->
+      <button class="button" id="myBtn">Click Here</button>
+      <div id="mypopup" class="popup">
+
+        <div class="popup-content">
+          <span class="close">&times;</span>
+
+
+          <div class="signupSection">
+            <div class="info">
+              <h2>Get Your Dream JOB</h2>
+
+              <p>Your Future Is Here</p>
+              <img src="https://cdn-icons-png.flaticon.com/512/2303/2303795.png" alt=""
+                style="height: 30%; width: 40%;">
+
+            </div>
+            <div class="signupForm" name="signupform">
+              <!-- <form action="#" method="POST" class="signupForm" name="signupform"> -->
+              <h2>Fill The Below</h2>
+              <ul class="noBullet">
+                <li>
+                  <br>
+                  <br>
+                  <label for="password">Are You A Graduate??</label><br>
+                  <select type="password" class="inputFields" id="password" name="password">
+                    <option selected value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </li>
+                <li>
+                <li>
+                  <br>
+
+                  <label for="selectfields">Choose Your Interested Fields</label><br>
+                  <select class="inputFields" id="selectfields" name="username">
+                    <option value="ComputerScience" id="cs">Computer Science</option>
+                    <option value="Electronics" id="ec">Electronics</option>
+                  </select>
+
+              </ul>
+              <li id="center-btn">
+                <button id="seeresults-btn" onclick="jobselect()">SEE RESULTS</button>
+
+              </li>
+              <!-- </form> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- vikas html -->
+    </div>
+
+    <div class="content">
+      <h1>To become a <span>Expert</span></h1>
+      <p>Experts in our website should have very high level of expereince with top most skills.Any how our team will
+        going to decide as their requirment.If you think you have such qualification and intrest please follow us.</p>
+      <a href="/expPersonalinfo" class="button">
+        <button class="hover-btn">Explore</button>
+
+      </a>
+    </div>
+
+    <div class="content">
+      <h1>Our <span>Excellence</span></h1>
+      <p>--Many users hired in their dream companies through our website,their details and our ratings are below--</p>
+      <a href="/portfolios" class="button">
+        <button class="hover-btn">Explore</button>
+
+      </a>
+    </div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+
+  <!-- our collabrations -->
+  <div class="ourc" id="ourcollab">
+    <h1>Our Collabrations</h1>
+  </div>
+  <section class="container">
+
+    <a href="/adobe" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-adobe.jpeg);">
+        <h3>Adobe</h3>
+      </div>
+    </a>
+    <a href="/amazon" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-amazon.jpeg);">
+        <h3>Amazon</h3>
+      </div>
+    </a>
+    <a href="/microsoft" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-microsoft.jpg);">
+        <h3>Microsoft</h3>
+      </div>
+    </a>
+    <a href="/ibm" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-ibm.jpeg);">
+        <h3>IBM</h3>
+      </div>
+    </a>
+    <a href="/infosys" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-infosys.jpeg);">
+        <h3>Infosys</h3>
+      </div>
+    </a>
+    <a href="/oracle" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-oracle.jpeg);">
+        <h3>Oracle</h3>
+      </div>
+    </a>
+    <a href="/accenture" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-accenture.jpeg);">
+        <h3>Accenture</h3>
+      </div>
+    </a>
+    <a href="/deloitte" class="panel">
+      <div class="panel" style="background-image: url(/js/images/img-delloite.jpeg);">
+        <h3>Delloite</h3>
+      </div>
+    </a>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="container1" id="footer">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="/contactabout#toabout">about us</a></li>
+            <li><a href="/contactabout">contact us</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#ourcollab">our collabrations</a></li>
+            <li><a href="/login">login</a></li>
+            <li><a href="/register">sign up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>who can use</h4>
+          <ul>
+            <li><a href="#">User</a></li>
+            <li><a href="#">expert</a></li>
+            <li><a href="#">admin</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<!-- script -->
+
+<script type="text/javascript">
+  //Javacript for responsive navigation menu
+  const menuBtn = document.querySelector(".menu-btn");
+  const navigation = document.querySelector(".navigation");
+
+  const home = document.querySelector('body');
+
+
+  home.addEventListener('load', () => {
+    console.log('heloo')
+    let i = 0;
+    while (i < 4) {
+      setTimeout(sliderNav(i), 1000);
+      console.log(i);
+      if (i == 3) {
+        i = 0;
+      }
+      i += 1;
+    }
+  })
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+  });
+
+  //Javacript for video slider navigation
+  const btns = document.querySelectorAll(".nav-btn");
+  const slides = document.querySelectorAll(".video-slide");
+  const contents = document.querySelectorAll(".content");
+
+  var sliderNav = function (manual) {
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+
+    contents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+  }
+
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      sliderNav(i);
+    });
+  });
+  // java script for change tab message(come back)
+  let docTitle = document.title;
+  window.addEventListener("blur", () => {
+    document.title = "Come Back ;(";
+  });
+
+  window.addEventListener("focus", () => {
+    document.title = docTitle;
+  });
+
+
+  // vikas script
+
+  var popup = document.getElementById("mypopup");
+    var popd = document.getElementById("popdiv");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      popup.style.display = "block";
+    }
+    span.onclick = function () {
+      popup.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the popup, close it
+    window.onclick = function (event) {
+      if (event.target == popup || popd) {
+        popup.style.display = "none";
+      }
+    }
+
+    function jobselect() {
+      // var btnn=document.getElementById("seeresults-btn");
+      switch (document.getElementById('selectfields').value) {
+
+        case "ComputerScience":
+          window.location.href = "/cscience";
+
+          break;
+
+        case "Electronics":
+          window.location.href = "/electronics";
+          break;
+      }
+    }
+  // vikas script close
+
+  //our collab
+  const panels = document.querySelectorAll('.panel');
+
+  panels.forEach(panel => {
+    panel.addEventListener('hover', () => {
+      removeActiveClasses();
+      panel.classList.add('active');
+    })
+  })
+
+  function removeActiveClasses() {
+    panels.forEach(panel => {
+      panel.classList.remove('active');
+    })
+  }
+</script>
+
+</html>

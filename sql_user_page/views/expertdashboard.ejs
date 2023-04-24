@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Expertdashboard</title>
+    <link rel="stylesheet" href="/css/expertdashboard.css" />
+    <script src="https://cdn.lordicon.com/ritcuqlt.js">
+    </script>
+
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header" id="navbar">
+        <div class="logo">
+            <a href="#">GraduatesWorld</a>
+            <h2>Expertdashboard</h2>
+        </div>
+        <div class="header-icons navbar">
+            <div class=" account dropdown" id="clickdrop">
+
+                <lord-icon id="dropicon" class="dropbtn" src="https://cdn.lordicon.com/bhfjfgqz.json"
+                    trigger="hover"></lord-icon>
+                <h4 class="dropbtn"><%= getnameee %></h4>
+                <div class="dropdown-content">
+                    <a href=""><%= getnameee %></a>
+                    <a href=""><%= getemailll %></a>
+                    <a href="">Update Profile?</a>
+                    <a href="/expertlogout">LogOut?</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <h2>Main Menu</h2>
+                <div class="search_box">
+                    <input type="text" placeholder="Search" onkeyup="searchFunction()" id="searchinput"
+                        name="searchinput">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul id="myul" class="list">
+                    <li> <a href="#" class="active">Dashboard</a></li>
+                    <li> <a href="/expertdashRegisApplicants">Registred Applicants</a></li>
+                    <li> <a href="">Create a test</a></li>
+                    <li> <a href="/Allusers">Search For user</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main-body" id="top">
+
+            <div class="promo_card">
+                <h1>Welcome to GraduatesWorld</h1>
+                <span>Your future is our concern</span>
+                <button class="my-button">Learn More</button>
+            </div>
+
+            <div class="history_lists">
+                <div class="list1">
+                </div>
+
+                <div class="list2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<script>
+    // script for onhover dropdown
+    var drop = document.getElementById("drop");
+    var clickdrop = document.getElementById("clickdrop");
+    clickdrop.onclick = function () {
+        drop.style.display = "block";
+    }
+
+    // script for sticky
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    function searchFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchinput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myul");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>

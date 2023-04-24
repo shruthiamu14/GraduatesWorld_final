@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eexpert Otp</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div>
+        <h1>Enter Otp</h1>
+    </div>
+    <div class="container">
+        <form id="form" class="form" method="post" action="/expertotp">
+            <!-- <h1>Sign Up</h1> -->
+            <span style="color:red;"><%= ot %></span>
+            <div class="form-field">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" name="otp" id="otp" autocomplete="off">
+                <small></small>
+            </div>
+            
+            <button type="submit" value="submit" name="submit" style="background-color: #51a8ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;">Submit</button>
+        </form>
+        <form id="form" class="form" action="/reverify_otp" method="post">
+            <button type="submit" style="background-color: #51a8ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;">Resend OTP</button>
+        </form>
+       
+    </div>
+
+
+<!--<script src="/js/register.js"></script>-->
+</body>
+
+
+</body>
+
+</html>

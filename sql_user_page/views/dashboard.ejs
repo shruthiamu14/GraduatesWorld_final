@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <script src="https://cdn.lordicon.com/ritcuqlt.js">
+
+    </script>
+
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">GraduatesWorld</a>
+        </div>
+
+        <div class="header-icons navbar">
+            <div class=" account dropdown" id="clickdrop">
+                
+                <lord-icon id="dropicon" class="dropbtn" src="https://cdn.lordicon.com/bhfjfgqz.json"
+                    trigger="hover"></lord-icon>
+                <h4 class="dropbtn"><%= getname %></h4>
+                <div class="dropdown-content">
+                    <a href=""><%= getname %></a>
+                    <a href=""><%= getemail %></a>
+                    <a href="/logout">logout</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <span>Main Menu</span>
+                <div class="search_box">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Available Jobs</a>
+                <a href="#">Applied Jobs</a>
+                <a href="#">History</a>
+                <a href="#">Application</a>
+                <a href="#">My Account</a>
+            </div>
+        </nav>
+
+        <div class="main-body">
+            <h2>Dashboard</h2>
+            <div class="promo_card">
+                <h1>Welcome to GraduatesWorld</h1>
+                <span>Your future is our concern</span>
+                <button class="my-button">Learn More</button>
+            </div>
+
+            <div class="history_lists">
+                <div class="list1">
+                </div>
+
+                <div class="list2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    var drop = document.getElementById("drop");
+    var clickdrop = document.getElementById("clickdrop");
+    clickdrop.onclick = function () {
+        drop.style.display = "block";
+    }
+// .onclick=function(){
+//       drop.style.display="none";
+//     };
+</script>
+
+</html>

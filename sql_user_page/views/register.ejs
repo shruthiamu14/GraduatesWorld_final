@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-Page</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div>
+        <h1>SignUp</h1>
+    </div>
+    <div class="container">
+        <form id="form" class="form" method="post" action="/register">
+            <!-- <h1>Sign Up</h1> -->
+            <span style="color:red;"><%= reg %></span>
+            <div class="form-field">
+                <label for="name">Fullname:</label>
+                <input type="text" name="name" id="name" autocomplete="off">
+                <span style="color:red;"><%= fn %></span>
+                <span style="color:red;"><%= me %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="off">
+                <span style="color:red;"><%= ga %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Address:</label>
+                <input type="text" name="address" id="address" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">City:</label>
+                <input type="text" name="city" id="city" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Pincode:</label>
+                <input type="text" name="Pincode" id="Pincode" autocomplete="off">
+                <span style="color:red;"><%= cnfpsd %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Phone:</label>
+                <input type="te" name="Phone" id="Phone" autocomplete="off">
+                <span style="color:red;"><%= psd %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off">
+                <span style="color:red;"><%= pass %></span>
+
+                <small></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm" autocomplete="off">
+                <span style="color:red;"><%= cfmpass %></span>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="specialization">Specialization:</label>
+                <input type="text" name="spe" id="spe" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Upload Resume</label>
+                <input type="file" name="Resume" id="Resume" autocomplete="off">
+                <small></small>
+            </div>
+            
+            <button type="submit" value="submit" name="submit" style="background-color: #51a8ab;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;">Submit</button>
+
+    <p>Already have an account? <a href="/login" class="a2">Login!</a></p>
+        </form>
+    </div>
+
+
+<!--<script src="/js/register.js"></script>-->
+</body>
+
+
+</body>
+
+</html>
