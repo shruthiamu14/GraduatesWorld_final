@@ -71,7 +71,6 @@ let pass=""
 let cfmpass=""
 let getname = ""
 let getemail = ""
-//let getname1 = ""
 
 app.get("/register", (req, res) => {
   res.render("register",{me,fn,psd,cnfpsd,ga,msg,reg,pass,cfmpass,va});
