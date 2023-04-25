@@ -15,7 +15,7 @@ const db = sql.createConnection({
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE,
 });
-
+// Database name = collab_together
 db.connect((err) => {
   if (err) throw err;
   else console.log("Database Connected Successfully");
