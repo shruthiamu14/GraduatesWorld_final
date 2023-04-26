@@ -6,7 +6,7 @@ const sql = require("mysql");
 const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser")
 const jwt = require("jsonwebtoken");
-const { promisify } = require("util");
+const { promisify } = require("util");  //
 
 
 const db = sql.createConnection({
@@ -15,7 +15,7 @@ const db = sql.createConnection({
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE,
 });
-
+// Database name = collab_together
 db.connect((err) => {
   if (err) throw err;
   else console.log("Database Connected Successfully");
@@ -71,14 +71,16 @@ let pass=""
 let cfmpass=""
 let getname = ""
 let getemail = ""
-//let getname1 = ""
 
-app.get("/register", (req, res) => {
-  res.render("register",{me,fn,psd,cnfpsd,ga,msg,reg,pass,cfmpass,va});
-});
+
 
 app.get("/login", (req, res) => {
   res.render("login",{data});
+});
+
+
+app.get("/register", (req, res) => {
+  res.render("register",{me,fn,psd,cnfpsd,ga,msg,reg,pass,cfmpass,va});
 });
 
 app.get("/verify", (req, res) => {
