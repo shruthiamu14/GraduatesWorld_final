@@ -106,11 +106,6 @@ app.get("/forgotPassword", (req, res) => {
   res.render("forgotPassword",{mis});
 });
 
-// app.get("/dashboard", (req, res) => {
-//   res.render("dashboard",{getname,getemail});
-// });
-
-
 app.get("/expertreg", (req, res) => {
   res.render("expertreg");
 });
@@ -228,31 +223,10 @@ app.get("/userquiz", (req, res) => {
   res.render("userquiz");
 });
 
-// app.get("/addajob", (req, res) => {
-//   res.render("addajob",{getnamee,getemaill,ad});
-// });
-
-
-
-
-
 app.get("/verifyreg", (req, res) => {
   res.render("verifyreg",{va});
   va =""
 });
-
-// app.get('/Allexperts', function (req, res, next) {
-//   db.query('SELECT * FROM expert', function (err, rows) {
-//       if (err) {
-//         throw err ; 
-//         req.flash('error', err)
-//         res.render('Allexperts', { data: '' })
-      
-//       } else {
-//         res.render('Allexperts', { data: rows })
-//       }
-//     })
-//   })
   
   app.post('/search', function (req, res, next) {
     let skill = req.body.selectfields;
@@ -337,8 +311,8 @@ let transporter = nodemailer.createTransport({
   service : 'gmail',
   
   auth: {
-    user: 'shyambhaskar27820@gmail.com',
-    pass: 'qbvxwmqcmcqxvblx',
+    user: 'graduatesworld7@gmail.com',
+    pass: 'pzsilziujnxkcqnn',
   }
   
 });
@@ -1388,12 +1362,6 @@ app.use('/expertdashRegisApplicants',(req,res)=>{
   }
 });
 
-
-
-// app.get("/removeuser", (req, res) => {
-//   res.render("removeuser",{getname,getemail,no_user});
-// });
-
 app.use('/removeuser',(req,res)=>{
   if(req.cookies.isLoggedInn){
     const decoded = jwt.verify(req.cookies.userSavee,process.env.JWT_SECRET );
@@ -1409,18 +1377,12 @@ app.use('/removeuser',(req,res)=>{
       const getnamee = result[0].name;
       const getemaill = result[0].email;
 
-      //console.log(getname);
-      //console.log(result[0]);
-
       res.render('removeuser', { getnamee, getemaill, no_user});
     });
   } else {
     return res.render('adminlogin', {no});
   }
 });
-// app.get("/removeexpert", (req, res) => {
-//   res.render("removeexpert",{getname,getemail,no_expert});
-// });
 
 app.use('/removeexpert',(req,res)=>{
   if(req.cookies.isLoggedInn){
@@ -1446,10 +1408,6 @@ app.use('/removeexpert',(req,res)=>{
     return res.render('adminlogin', {no});
   }
 });
-
-// app.get("/sendmail", (req, res) => {
-//   res.render("sendmail",{getname,getemail,sel_expert});
-// });
 
 app.use('/sendmail',(req,res)=>{
   if(req.cookies.isLoggedInn){
@@ -1493,7 +1451,6 @@ app.post("/remuser",(req,res)=> {
       res.redirect("/removeuser")
   }
   else {
-     console.log("Shyam Bhaskar")
       no_user = "User not found";
       res.redirect("/removeuser")
   }
@@ -1541,7 +1498,7 @@ app.post("/sendEmail",(req,res)=> {
       var mailOptions={
         to: email,
         subject: "Selected Expert Login Details : ",
-        html: "<h3>Expert Password </h3>"  + "<h1 style='font-weight:bold;'>" + pass +"</h1>" 
+        html: "<h3> Congratulations Expert you have been selected, Your login credentials as follows : </h3>"  + "<h1 style='font-weight:bold;'>" + pass +"</h1>" 
      };
      
      transporter.sendMail(mailOptions, (error, info) => {
