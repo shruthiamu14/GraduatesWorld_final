@@ -108,6 +108,42 @@ section {
   display: none;
 }
 
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.letter {
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+.letter{
+  transition: ease-in-out;
+}
+.letter:nth-child(1) { animation-delay: 0.05s;}
+.letter:nth-child(2) { animation-delay: 0.1s; }
+.letter:nth-child(3) { animation-delay: 0.15s; }
+.letter:nth-child(4) { animation-delay: 0.2s; }
+.letter:nth-child(5) { animation-delay: 0.25s; }
+.letter:nth-child(6) { animation-delay: 0.30s; }
+.letter:nth-child(7) { animation-delay: 0.35s; }
+.letter:nth-child(8) { animation-delay: 0.40s; }
+.letter:nth-child(9) { animation-delay: 0.45s; }
+.letter:nth-child(10) { animation-delay: 0.50s; }
+.letter:nth-child(11) { animation-delay: 0.55s; }
+.letter:nth-child(12) { animation-delay: 0.60s; }
+.letter:nth-child(13) { animation-delay: 0.65s; }
+.letter:nth-child(14) { animation-delay: 0.70s; }
+
+
+.lettercol{
+  color: #fff;
+}
 .home .content.active {
   display: block;
 }
