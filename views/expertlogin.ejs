@@ -14,7 +14,7 @@
   <div class="login-box">
     <p>Expert Login</p>
     <form method="POST" id="form" action="/expertlogin"> 
-      <span style="color:red;"><%= data %></span>
+      <span id = "errorMessage" style="color:red;"></span>
       <div class="user-box">
         <input name="email" type="email" id="email" required autocomplete="off">
         <label>Email</label>
@@ -36,13 +36,58 @@
     <br>
     <p>Forgotpassword?<a href="/verify_expert" class="forgot">click</a></p>
 
-  <!-- <script >
+    <script>
 
-    function myFunction() {
-      window.alert("Your Email and password is incorrect")
-    }
-
-  </script> -->
+      // expertlogin.js
+   document.addEventListener("DOMContentLoaded", function() {
+       const loginForm = document.getElementById("form");
+       const errorMessage = document.getElementById("errorMessage");
+   
+       loginForm.addEventListener("submit", function(event) {
+           event.preventDefault();
+           const email = document.getElementById("email").value;
+           const password = document.getElementById("password").value;
+   
+           console.log(email,password);
+   
+           // Send a POST request to the server
+           fetch("/expertlogin", {
+               method: "POST",
+               headers: {
+                   "Content-Type": "application/json",
+               },
+               body: JSON.stringify({
+                   email: email,
+                   password: password,
+               }),
+           })
+           .then((response) => {
+               if (response.ok) {
+                   return response.json();
+               } else {
+                   throw new Error("Invalid login credentials");
+               }
+           })
+           .then((data) => {
+               if (data.message === "success") {
+                 console.log("gagan")
+                   window.location.href = "/expertdashboard"; // Redirect to a dashboard or another page
+               } else {
+                   errorMessage.textContent = "Invalid login credentials.";
+               }
+           })
+           .catch((error) => {
+       if (error instanceof TypeError) {
+           errorMessage.textContent = "Network error occurred. Please try again.";
+         } else {
+             errorMessage.textContent = "An error occurred: " + error.message;
+         }
+   });
+       });
+   });
+   
+   
+     </script> 
   
 </body>
 

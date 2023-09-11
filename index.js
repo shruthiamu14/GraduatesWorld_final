@@ -8,6 +8,8 @@ const cookieParser = require("cookie-parser")
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");  //
 
+const bodyParser = require("body-parser");
+
 
 const db = sql.createConnection({
   host: process.env.DATABASE_HOST,
@@ -26,6 +28,8 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.listen(5000);
 
+// Parse JSON data from the request body
+app.use(bodyParser.json());
 const path = require("path");
 const { error } = require("console");
 app.use(express.static(path.join(__dirname, "public")));
@@ -75,7 +79,8 @@ let getemail = ""
 
 
 app.get("/login", (req, res) => {
-  res.render("login",{data});
+  res.render("login");
+  //data = "";
 });
 
 
@@ -123,7 +128,7 @@ app.get("/amazon", (req, res) => {
   res.render("amazon");
 });
 app.get("/expertlogin", (req, res) => {
-  res.render("expertlogin",{data});
+  res.render("expertlogin");
 });
 app.get("/microsoft", (req, res) => {
   res.render("microsoft");
@@ -447,9 +452,7 @@ cfmpass="";
              console.log(reg);
              res.redirect("/register")
             }
-          })
-         
-           
+          })      
   }
   else{
     msg ="Invalid Credentials"
@@ -561,7 +564,7 @@ if(onlyLetters(name) && validEmail(email))
   }
   else{
     msg ="Invalid Credentials"
-    res.redirect("/expPersonalinfo")
+    res.redirect("/expPersonalinfo")      
   }
 
   
@@ -764,8 +767,13 @@ app.post("/expertforgot",(req,res)=>{
 
 
 app.post("/login", (req, res) => {
+
+
+  
   const email = req.body.email;
   const password = req.body.password;
+
+  console.log(email,password);
   db.query(
     "select * from user_login where email=? and password=? ",
     [email, password],
@@ -801,11 +809,19 @@ app.post("/login", (req, res) => {
               // res.json({
               //   message:'redirected'
               // });
-              res.cookie('isLoggedIn','ok')
-              res.redirect("/userdashboard");
-      } else {
-        data = "Incorrect Login details";
-        res.redirect("/login");
+              res.cookie('isLoggedIn','ok');
+              // Successful login
+            res.json({ message: "success" });
+
+              //res.redirect("/userdashboard");
+      } else {                                                  
+
+        // Invalid credentials
+        res.status(401).json({ message: "Invalid login credentials" });
+        
+        // data = "Incorrect Login details";
+        // res.redirect("/login");
+        
       }
     }
   );
@@ -817,6 +833,7 @@ app.post("/login", (req, res) => {
 app.post("/expertlogin", (req, res) => {
   const email = req.body.email;                    
   const password = req.body.password;
+  
   db.query(
     "select * from expert_login where email=? and password=? ",
     [email, password],
@@ -824,6 +841,7 @@ app.post("/expertlogin", (req, res) => {
       if (err) {
         console.error(err.message);
       }
+      
       if (result.length !== 0) {
         db.query("select email from expert where email=?",[email],(err,result)=> {
                 getnameee= result[0].username;
@@ -851,12 +869,15 @@ app.post("/expertlogin", (req, res) => {
               // res.json({
               //   message:'redirected'
               // });
-              res.cookie('isLoggedInnn','ok')
-              res.redirect("/expertdashboard");
+              res.cookie('isLoggedInnn','ok');
+              res.json({ message: "success" });
+             // res.redirect("/expertdashboard");
      
       } else {
-        data = "Incorrect Login details";
-        res.redirect("/expertlogin");
+        // Invalid credentials
+        res.status(401).json({ message: "Invalid login credentials" });
+        // data = "Incorrect Login details";
+        // res.redirect("/expertlogin");
       }
     }
   );
@@ -1296,7 +1317,7 @@ app.use('/addajob',(req,res)=>{
         return res.render('error', { message: 'An error occurred' });
       }
 
-      const getnamee = result[0].name;
+      const getnamee = result[0].name;              
       const getemaill = result[0].email;
 
       //console.log(getname);
@@ -1536,7 +1557,7 @@ app.post("/job",(req,res)=>{
     }
     else {
       ad="Successfully added"
-      res.redirect("/addajob")
+      res.redirect("/addajob")              
     }
   })
 })
