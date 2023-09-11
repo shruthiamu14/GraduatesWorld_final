@@ -1,4 +1,4 @@
-// sample commit
+// sample commits
 const express = require("express");  
 const app = express();
 const nodemailer = require('nodemailer');
